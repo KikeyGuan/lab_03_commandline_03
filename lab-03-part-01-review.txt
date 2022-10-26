@@ -16,7 +16,7 @@ This lab will review downloading and uncompressing files, and it will get us set
 Write the command that you used to do this below:
 ----------
 
-
+cd ~
 
 ==========
 2. Prove that you're in your home directory.
@@ -24,7 +24,8 @@ Write the command that you used to do this below:
 Write the command that you used to do this - as well as its output - below :
 ----------
 
-
+pwd
+/c/Users/user
 
 ==========
 3. Are there any directories or files in your directory that have the word mtec1003 in it?
@@ -32,13 +33,15 @@ Write the command that you used to do this - as well as its output - below :
 Write the command(s) that you used to determine this - as well as its output - below:
 ----------
 
-
+ls , to check all directories
+or cd mtec1003 , press tab on the first letter to narrow down the search after cd
+cd mtec1003/
 
 ==========
 4. If there are directories or files in your home directory that have the word mtec1003 in them, list them below (otherwise skip this step):
 ----------
 
-
+cd mtec1003/
 
 ==========
 5. Delete these directories from your home folder by using this command:
@@ -52,7 +55,7 @@ $ rm -rf mtec1003-lab-03
 (skip if these directories don't exist)
 ----------
 
-
+no change
 
 ==========
 6.  A compressed archive (.tar.gz) of the lab files can be found at this url: 
@@ -66,6 +69,16 @@ This command should have a *flag* to specify the output file.  MAKE SURE TO NAME
 Write the command(s) that you used to download this file - as well as its output - below:
 ----------
 
+curl -o mtec-1003-lab-03.tar.gz https://citytech.s3.amazonaws.com/mtec-1003-lab-03.tar.gz
+ % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0
+curl: (60) SSL certificate problem: unable to get local issuer certificate
+More details here: https://curl.se/docs/sslcerts.html
+
+curl failed to verify the legitimacy of the server and therefore could not
+establish a secure connection to it. To learn more about this situation and
+how to fix it, please visit the web page mentioned above.
 
 
 ==========
@@ -74,7 +87,7 @@ Write the command(s) that you used to download this file - as well as its output
 Write the command(s) that you used to do this - as well as its output - below:
 ----------
 
-
+no change
 
 ==========
 8.  You should now have a directory called mtec-1003-lab-03 in your home directory.  Verify that this directory exists.
@@ -89,7 +102,7 @@ Otherwise...
 Write the command(s) that you used to do this - as well as its output - below:
 ----------
 
-
+no change
 
 ==========
 9.  What directories are in the mtec-1003-lab-03 folder?
@@ -97,7 +110,9 @@ Write the command(s) that you used to do this - as well as its output - below:
 Write the command(s) that you used to determine this - as well as its output - below:
 ----------
 
-
+cd mtec-1003-lab-03
+ls
+(dont have the files)
 
 ==========
 10.  Now... go back home.  Then change to the science-fiction directory using a relative path.  The directory is located in books... which is located in the mtec-1003-lab-03 directory.  Verify you're in the right directory using pwd.
@@ -105,7 +120,9 @@ Write the command(s) that you used to determine this - as well as its output - b
 Write the command(s) (including going home) that you used to do this below:
 ----------
 
-
+cd mtec-1003-lab-03/books/science-fiction
+pwd
+(dont have files)
 
 ==========
 11.  Write the files that are in the science fiction directory below.
@@ -113,7 +130,7 @@ Write the command(s) (including going home) that you used to do this below:
 Write the command(s) that you used to do this - as well as its output - below:
 ----------
 
-
+dont have files
 
 ==========
 12.  Again, go back to your home directory.  Now... go to the science-fiction directory using an absolute path!  Verify that you're in the right directory using pwd.
@@ -121,13 +138,18 @@ Write the command(s) that you used to do this - as well as its output - below:
 Write the command(s) that you used to do this below:
 ----------
 
+cd /c/Users/user/mtec1003/mtec-1003-lab-03/books/science-fiction
+pwd 
+/c/Users/user/mtec1003/mtec-1003-lab-03/books/science-fiction
+
+
 ==========
 13. Immediately change back to the mtec-1003-lab-03 folder with a single command using a *relative* path.
 
 Write the command(s) that you used to do this below:
 ----------
 
-
+cd ../..
 
 ==========
 14. Find out what the most recently modified directory is in mtec-1003-lab-03 (there are only 3 to choose from)?  How would you find this out?  Hint: perhaps using something to show the modified date... and sort it by time.
@@ -135,8 +157,12 @@ Write the command(s) that you used to do this below:
 Write the command(s) that you used to do this below:
 ----------
 
+dont have files
+
 ==========
 15. Create a compressed archive of the logs folder - that is... take the contents of logs and create a single archive (.tar), and compress (.gz) (tar, gzip)
 
 Write the command(s) that you used to do this below:
 ----------
+
+dont have files
