@@ -80,6 +80,7 @@ curl failed to verify the legitimacy of the server and therefore could not
 establish a secure connection to it. To learn more about this situation and
 how to fix it, please visit the web page mentioned above.
 
+*i just downlaoded the file on web and dragged it into the right folder manually
 
 ==========
 7.  Uncompress the file that you just downloaded.
@@ -87,7 +88,8 @@ how to fix it, please visit the web page mentioned above.
 Write the command(s) that you used to do this - as well as its output - below:
 ----------
 
-no change
+tar -xvf mtec-1003-lab-03.tar.gz
+outcome- a long list of files
 
 ==========
 8.  You should now have a directory called mtec-1003-lab-03 in your home directory.  Verify that this directory exists.
@@ -102,7 +104,8 @@ Otherwise...
 Write the command(s) that you used to do this - as well as its output - below:
 ----------
 
-no change
+pwd
+/c/Users/user/mtec1003/mtec-1003-lab-03
 
 ==========
 9.  What directories are in the mtec-1003-lab-03 folder?
@@ -110,9 +113,8 @@ no change
 Write the command(s) that you used to determine this - as well as its output - below:
 ----------
 
-cd mtec-1003-lab-03
 ls
-(dont have the files)
+books/  logs/  web/
 
 ==========
 10.  Now... go back home.  Then change to the science-fiction directory using a relative path.  The directory is located in books... which is located in the mtec-1003-lab-03 directory.  Verify you're in the right directory using pwd.
@@ -120,9 +122,10 @@ ls
 Write the command(s) (including going home) that you used to do this below:
 ----------
 
-cd mtec-1003-lab-03/books/science-fiction
+cd ~
+cd mtec1003/mtec-1003-lab-03/books/science-fiction
 pwd
-(dont have files)
+/c/Users/user/mtec1003/mtec-1003-lab-03/books/science-fiction
 
 ==========
 11.  Write the files that are in the science fiction directory below.
@@ -130,7 +133,8 @@ pwd
 Write the command(s) that you used to do this - as well as its output - below:
 ----------
 
-dont have files
+ls
+pg84.txt  pg86.txt
 
 ==========
 12.  Again, go back to your home directory.  Now... go to the science-fiction directory using an absolute path!  Verify that you're in the right directory using pwd.
@@ -157,7 +161,11 @@ cd ../..
 Write the command(s) that you used to do this below:
 ----------
 
-dont have files
+*not sure -t is not shwoing the time
+ls -t -l
+drwxr-xr-x 1 user 197609 0 Oct 13  2021 books/
+drwxr-xr-x 1 user 197609 0 Oct 13  2021 logs/
+drwxr-xr-x 1 user 197609 0 Oct 13  2021 web/
 
 ==========
 15. Create a compressed archive of the logs folder - that is... take the contents of logs and create a single archive (.tar), and compress (.gz) (tar, gzip)
@@ -165,4 +173,4 @@ dont have files
 Write the command(s) that you used to do this below:
 ----------
 
-dont have files
+tar -cvf logs.tar logs
