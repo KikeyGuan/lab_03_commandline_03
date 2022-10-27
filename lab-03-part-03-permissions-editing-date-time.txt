@@ -18,7 +18,8 @@ We're going to be writing a shell script.  First, though... let's figure out wha
 What command did you use, and what was its output?
 ----------
 
-
+date
+Wed Oct 26 23:54:02 EDT 2022
 
 ==========
 2. Print out a calendar for this month.
@@ -26,7 +27,8 @@ What command did you use, and what was its output?
 What command did you use, and what was its output?
 ----------
 
-
+cal
+bash: cal: command not found
 
 ==========
 3. Go to your home directory.  Verify that you're in your home directory.
@@ -34,7 +36,9 @@ What command did you use, and what was its output?
 What commands did you use to do this?
 ----------
 
-
+cd ~
+pwd
+/c/Users/user
 
 ==========
 4. Create an empty file called copy_to_backup.sh.  Verify that the file exists.
@@ -42,7 +46,13 @@ What commands did you use to do this?
 What commands did you use to do this?
 ----------
 
-
+touch copy_to_backup.sh
+(using mtec1003 folder)
+ls
+aardvark/          foo/         mtec-1003-lab-03/        p-/
+copy_to_backup.sh  food/        mtec-1003-lab-03.tar.gz  pineapple/
+evenmorestuff/     google.html  mtec1003-lab-02/         stuff/
+file.tar.gz        lab2.html    mtec1003-lab-02.zip      stuff,/
 
 ==========
 5. What are the permissions on your copy_to_backup.sh.
@@ -50,7 +60,8 @@ What commands did you use to do this?
 What command did you use to find the permissions?
 ----------
 
-
+ls -l copy_to_backup.sh
+-rw-r--r-- 1 user 197609      0 Oct 26 23:56 copy_to_backup.sh
 
 ==========
 6. Change the permissions so that this file is executable by the user.  Verify the new permissions.
@@ -58,17 +69,20 @@ What command did you use to find the permissions?
 What commands did you use to do this?  What was the output?
 ----------
 
-
+chmod u+x copy_to_backup.sh
+ ls -l copy_to_backup.sh
+-rw-r--r-- 1 user 197609 0 Oct 26 23:56 copy_to_backup.sh
+no change
 
 ==========
-7. Try executing the file!
+7. Try executing the file! XXXXXXXXXXXXXXXXX<-bookmarking
 
 $ ./copy_to_backup.sh
 
 What command did you use to try to execute the file?  What happens?
 ----------
 
-
+no change
 
 ==========
 8. Open the file with nano
@@ -76,7 +90,7 @@ What command did you use to try to execute the file?  What happens?
 What command did you use to do this?
 ----------
 
-
+nano copy_to_backup.sh
 
 ==========
 9. In your file, write the following commands:
@@ -88,17 +102,23 @@ c. print out "I'm done backing up"
 Write out the code in your file below...
 ----------
 
-
+mkdir backup
+cp mtec1003 backup
+echo "i'm done backing up"
 
 ==========
 10. Create a directory in your home called test
 ----------
+
+created
+
 ==========
 11. Go into that directory and create two empty files... 1.txt and 2.txt
 
 What commands did you use to do this?
 ----------
 
+mkdir 1.txt 2.txt
 
 
 ==========
@@ -107,7 +127,7 @@ What commands did you use to do this?
 What commands did you use to do this?
 ----------
 
-
+mv copy_to_backup.sh test
 
 ==========
 13. Run your script.
@@ -115,6 +135,9 @@ What commands did you use to do this?
 What commands did you use to do this?
 ----------
 
+mkdir -p backup
+cp -r /c/users/user/mtec1003 backup
+echo "I'm done backing up"
 
 
 ==========
@@ -122,3 +145,16 @@ What commands did you use to do this?
 
 What commands did you use to do this?  Show the output.
 ----------
+
+cd backup/mtec1003
+
+ls
+aardvark/       food/              mtec-1003-lab-03.tar.gz  pineapple/
+evenmorestuff/  google.html        mtec1003-lab-02/         stuff/
+file.tar.gz     lab2.html          mtec1003-lab-02.zip      stuff,/
+foo/            mtec-1003-lab-03/  p-/
+
+pwd
+/c/Users/user/test/backup/mtec1003
+
+
