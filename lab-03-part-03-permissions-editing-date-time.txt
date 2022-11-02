@@ -72,7 +72,7 @@ What commands did you use to do this?  What was the output?
 chmod u+x copy_to_backup.sh
  ls -l copy_to_backup.sh
 -rw-r--r-- 1 user 197609 0 Oct 26 23:56 copy_to_backup.sh
-no change
+no change (gitbash)
 
 ==========
 7. Try executing the file! XXXXXXXXXXXXXXXXX<-bookmarking
@@ -135,9 +135,7 @@ mv copy_to_backup.sh test
 What commands did you use to do this?
 ----------
 
-mkdir -p backup
-cp -r /c/users/user/mtec1003 backup
-echo "I'm done backing up"
+./ copy_to_backup.sh
 
 
 ==========
